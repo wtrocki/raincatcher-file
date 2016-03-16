@@ -1,6 +1,6 @@
 {
   "name": "fh-wfm-file",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A WFM module providing file support",
   "main": "file.js",
   "scripts": {
