@@ -2,7 +2,7 @@
   "name": "fh-wfm-file",
   "version": "0.0.1",
   "description": "A WFM module providing file support",
-  "main": "file.js",
+  "main": "lib/file-client.ng.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +11,14 @@
     "file"
   ],
   "author": "bleathem@gmail.com",
-  "license": "SEE LICENSE IN LICENSE.txt"
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "dependencies": {
+    "base64-stream": "^0.1.3",
+    "express": "^4.13.4",
+    "lodash": "^4.6.1",
+    "multer": "^1.1.0",
+    "q": "^1.4.1",
+    "through2": "^2.0.1",
+    "uuid-js": "^0.7.5"
+  }
 }
