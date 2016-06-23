@@ -1,4 +1,4 @@
-# FeedHenry WFM file
+# FeedHenry WFM file [![Build Status](https://travis-ci.org/feedhenry-raincatcher/raincatcher-file.png)](https://travis-ci.org/feedhenry-raincatcher/raincatcher-file)
 
 A module for FeedHenry WFM that manages files. It provides :
 - Backend services that expose REST endpoints to create and read operations for files .
@@ -90,5 +90,5 @@ Base url : `/file/wfm`
       name: req.params.filename,
       uid: uuid.create().toString()
    }
-   
+
 ```
