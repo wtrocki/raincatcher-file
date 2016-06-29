@@ -1,6 +1,6 @@
-# FeedHenry WFM file [![Build Status](https://travis-ci.org/feedhenry-raincatcher/raincatcher-file.png)](https://travis-ci.org/feedhenry-raincatcher/raincatcher-file)
+# FeedHenry RainCatcher file [![Build Status](https://travis-ci.org/feedhenry-raincatcher/raincatcher-file.png)](https://travis-ci.org/feedhenry-raincatcher/raincatcher-file)
 
-A module for FeedHenry WFM that manages files. It provides :
+A module for FeedHenry RainCatcher that manages files. It provides :
 - Backend services that expose REST endpoints to create and read operations for files .
 - Frontend directives and services providing a REST client for files.
 
@@ -43,7 +43,7 @@ camera.capture()
       });
 ```
 
-For a more complete example around files operations, please check the [demo mobile app](https://github.com/feedhenry-staff/wfm-mobile/blob/master/src/app/file/file.js).
+For a more complete example around files operations, please check the [demo mobile app](https://github.com/feedhenry-raincatcher/raincatcher-demo-mobile/blob/master/src/app/file/file.js).
 
 ##### Directives
 
