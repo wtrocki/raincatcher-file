@@ -1,10 +1,22 @@
 language: node_js
 node_js:
-  - "0.10"
-  - "4.4.2"
+  - '0.10'
+  - 4.4.2
 sudo: false
 before_install:
   - npm install -g npm@2.13.5
   - npm install -g grunt@0.4.5
   - npm install -g grunt-cli
 install: npm install
+scripts:
+  - bash <(curl https://gist.githubusercontent.com/feedhenry-raincacher/01ac4cdb3b0770bdb58489dbc17ed6b6/raw/6205a628c3616f6736fd866d5f0fba0a781ec1e4/sonarqube.sh)
+notifications:
+  email: false
+  slack:
+    on_success: change
+    on_failure: always
+    rooms:
+      secure: >-
+        qrcxApjaQtD/vHsvkApXF8KBPncxPfDZmQSSWktGKuReC5MjJjPSHn658/jRNVxzJfL7Bp0TvQmVsBFNnmlXrw97p7r9rM4zOJRFMRXHXO9q7pjS/bDiJAck5nrKMBmCQfkgy+TxIO6aKErso/T8VJSJJgAP8FCbtYGrkqcvHBZka0Migy1+hyJ56+KdogTlGMSyQqAQPLzFLcwr9v7Sf/xAY2Hok0WSkpdcH4AUld9p2N5U+IZ12E2Szb9GtZmsNqL/3OzqOOWomAguXsgzxz1Morg947d9g95EStO7TlwqYu0IKo8JljmKj6k6Mu7Q2KPViPEJfTxMe0F3OJj2pAoBrM4ZZrGmr8NdNbU5YiqiWly2Z5Jwx8P8gC7HEcX89YrBzvAen1MVFLAxjnaRsca2UdwdcPdNHi67Xl6tPm4u8JE3UYzh6Wj0JO5BPDLzzvaTpzqbZTX6EvydOrwByKfRj0cfHUYInhezYoVMQa5s3sRYOTReTOvxoyoLJFY8Tv3gmRC75JIFszDz6XaWjmP8IFEyPnjo6QSTF61c6jRHJwtXgyXKwih9zbVvNgm559bmIYZBnxC36zoWde/o3WynY0EKLxjqkKyu8Lccmo9172s0rQFlC2SCmI8bUaDjClHWNUXIsscUa6NfvTJ6oget978jtdTqdxQQDSq66Do=
+    on_pull_requests: false
+
