@@ -1,6 +1,7 @@
 {
   "env": {
-    "node": true
+    "node": true,
+    "browser": true
   },
   "extends": "eslint:recommended",
   "rules": {
@@ -27,6 +28,9 @@
   },
   "globals": {
     "angular": false,
+    "$fh": false,
+    "FileTransfer": false,
+    "FileUploadOptions": false
   }
 }
 
