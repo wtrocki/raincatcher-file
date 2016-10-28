@@ -9,6 +9,8 @@ before_install:
   - npm install -g grunt-cli
   - npm install -g nsp
 install: npm install
+services:
+  - docker
 script:
   - npm test
   - nsp check
