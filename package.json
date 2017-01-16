@@ -3,6 +3,10 @@
   "version": "0.0.7",
   "description": "A WFM module providing file support",
   "main": "lib/angular/file-ng.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feedhenry-raincatcher/raincatcher-file.git"
+  },
   "scripts": {
     "test": "grunt eslint"
   },
