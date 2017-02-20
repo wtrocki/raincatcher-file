@@ -5,11 +5,10 @@ A module for FeedHenry RainCatcher that manages files. It provides :
 - Frontend directives and services providing a REST client for files.
 
 
-## Client-side usage
 
-### Client-side usage (via broswerify)
+## Client-side usage (via broswerify)
 
-#### Setup
+### Setup
 This module is packaged in a CommonJS format, exporting the name of the Angular namespace.  The module can be included in an angular.js as follows:
 
 ```javascript
@@ -19,9 +18,9 @@ angular.module('app', [
 ])
 ```
 
-#### Integration
+### Integration
 
-##### Angular Services
+#### Angular Services
 
 This module provides a injectable file service : `fileClient`
 
@@ -45,11 +44,22 @@ camera.capture()
 
 For a more complete example around files operations, please check the [demo mobile app](https://github.com/feedhenry-raincatcher/raincatcher-demo-mobile/blob/master/src/app/file/file.js).
 
-##### Directives
+#### Directives
 
-| Name | Attributes |
-| ---- | ----------- |
-| wfm-img | uid |
+| name    	| wfm-img                             	|
+|---------	|-------------------------------------	|
+| purpose 	| retrieves image file from the cloud 	|
+| args    	| uid of the file                     	|
+| example 	| ```<img wfm-img uid="ctrl.file.uid" style="width:450px">```                            	|
+
+
+
+| name    	| file-detail                          	|
+|---------	|-------------------------------------	|
+| purpose 	| presents file details as a list, takes options to select which details it will show. 	|
+| args    	| `file`: file object, `display-options`: array of file attributes e.g. ```self.displayOptions = {id: true, name: true, uid: true, owner: true, preview: true};```
+                    	|
+| example 	| ```<file-detail file="ctrl.file" display-options="ctrl.displayOptions"></file-detail>```                            	|
 
 
 ## Usage in an express backend
@@ -81,6 +91,19 @@ Base url : `/file/wfm`
 | /owner/:owner | GET | filtered array of files |
 | /owner/:owner/upload/base64/:filename | POST | file metadata |
 | /upload/binary | POST | file metadata  |
+
+
+## Mediator events
+the module publishes following topics:
+- `wfm:file:detail:close` - on file detail view close. 
+    
+    Client app example:
+   ```
+     mediator.subscribeForScope('wfm:file:detail:close', $scope, function() {
+       $state.go('app.file');
+     });
+    ```
+
 
 #### File metadata structure
 
