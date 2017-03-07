@@ -17,6 +17,5 @@ module.exports = function(grunt) {
       }
     }
   });
-  grunt.registerTask('eslint', ['eslint']);
-  grunt.registerTask('test', ['mochify:unit']);
+  grunt.registerTask('test', ['eslint', 'mochify:unit']);
 };
