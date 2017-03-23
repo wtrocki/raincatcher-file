@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function(grunt){
   'use strict';
   require('load-grunt-tasks')(grunt);
   grunt.initConfig({
@@ -13,9 +13,15 @@ module.exports = function(grunt) {
         reporter: 'spec'
       },
       unit: {
-        src: ['lib/*-spec.js', 'lib/angular/directives/*-spec.js']
+        src: ['lib/**/*-spec.js']
       }
+    },
+    wfmTemplate: {
+      module: "wfm.file.directives",
+      templateDir: "lib/angular/templates",
+      outputDir: "lib/angular/dist-templates"
     }
   });
-  grunt.registerTask('test', ['eslint', 'mochify:unit']);
+  grunt.registerTask('eslint', ['eslint']);
+  grunt.registerTask('test', ['mochify:unit']);
 };
