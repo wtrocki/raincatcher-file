@@ -28,7 +28,6 @@
     "curly": ["error", "all"]
   },
   "globals": {
-    "angular": false,
     "$fh": false,
     "FileTransfer": false,
     "FileUploadOptions": false

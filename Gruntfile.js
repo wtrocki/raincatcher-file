@@ -15,11 +15,6 @@ module.exports = function(grunt){
       unit: {
         src: ['lib/**/*-spec.js']
       }
-    },
-    wfmTemplate: {
-      module: "wfm.file.directives",
-      templateDir: "lib/angular/templates",
-      outputDir: "lib/angular/dist-templates"
     }
   });
   grunt.registerTask('eslint', ['eslint']);
