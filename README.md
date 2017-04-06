@@ -98,3 +98,9 @@ Base url : `/file/wfm`
    }
 
 ```
+
+## Persistent file storage
+
+By default file module would store files in filesystem temporary folder.
+To enable persistent storage please set `usePersistentStorage` flag to true in [config](./lib/config.js) 
+and add [file-storage-module](https://github.com/feedhenry-raincatcher/raincatcher-file-storage) to your application.
